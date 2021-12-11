@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="contactus.css">
+        
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="logo">BalKaranSingh</h1>
+        
+              <nav>
+                <ul>
+                  <li><a href="main.html">Main</a></li>
+                  <li><a href="honestly.html">Honestly</a></li>
+                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div class="wrapper">
+            <h2>Contact us</h2>
+            <div id="error_message">
+               
+            </div>
+            <form action="https://formspree.io/f/mayvyqlr"
+            method="POST" id="myform" onsubmit = "return validate();"action=>
+              <div class="input_field">
+                  <input type="text" name = "name" placeholder="Name" id="name">
+              </div>
+              <div class="input_field">
+                <input type="text" name = "email" placeholder="Email" id="email">
+            </div>
+              <div class="input_field">
+                  <input type="text" name = "address" placeholder="Address" id="add">
+              </div>
+              <div class="input_field">
+                <input type="text" name = "city" placeholder="City" id="city">
+            </div>
+              <div class="input_field">
+                <input type="text" name = "postalcode" placeholder="Postal Code" id="postalcode">
+            </div>
+            
+              <div class="input_field">
+                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck">Comment/Questions  
+                <br>
+                <br>
+                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck">Hiring<br>
+    <div id="ifYes" style="visibility:hidden">
+      <textarea name = "message" placeholder="Message" id="message"></textarea>
+      <div id="ifNo" style="visibility:hidden">
+        <input type="text" name = "hiringRate" placeholder="Input Hourly Rate">
+    </div>      
+                  
+              </div>
+                  <button class = "navitem" type="submit" value = "send">SUBMIT</button>
+            </form>
+          </div>
+        <script src="validationcontact.js" async defer></script>
+    </body>
+</html>
